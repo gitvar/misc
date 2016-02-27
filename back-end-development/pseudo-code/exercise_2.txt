@@ -1,0 +1,35 @@
+# exercise_2.txt
+
+# Write a pseudo code method that takes an array of strings, and returns a string that is all those strings concatenated together
+
+
+# Casual Pseudo Code:
+#
+Given an array of strings.
+
+Save the first string of the array (first element of the array) to a variable.
+Iterate through the array one string at a time.
+  - for each iteration 'append' a single space to the saved string (to leave a space between the different concatenated strings).
+  - for each iteration 'append' the next string to the saved string.
+
+After iterating through the array of strings, return the saved string.
+
+
+# Formal Pseudo Code:
+#
+START
+
+# Given an array of strings: arr_str[].
+
+SET concat_str = arr_str[0]
+SET iterator = 0
+
+WHILE iterator < length of arr_str
+  append " " to the end of concat_str
+  append arr_str[iterator] to the end of concat_str
+
+  iterator = iterator + 1
+
+PRINT concat_str
+
+END

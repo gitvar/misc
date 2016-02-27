@@ -1,0 +1,25 @@
+# exercise_1.txt
+
+# Write a pseudo code method that returns the sum of two integers:
+
+
+# Casual Pseudo Code:
+#
+Given two integers.
+
+Define a new integer which contains the sum of the given two integers.
+Return the new integer.
+
+
+# Formal Pseudo Code:
+#
+
+START
+
+# Given two integers, num1 and num2.
+
+SET result = num1 + num2.
+
+PRINT result
+
+END
