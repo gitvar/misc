@@ -1,0 +1,54 @@
+Let me see if I can help you.
+
+Here is the method again for clarity:
+
+```ruby
+# fibonacci.rb
+
+def fibonacci(number)
+  if number < 2
+    number
+  else
+    fibonacci(number - 1) + fibonacci(number - 2)
+  end
+end
+```
+
+Lets look at the tree structure now. Look at the leftmost three blocks. The ones that have f(2) and then under that f(0) and f(1).
+
+This is the small tree for fibonacci(2), i.e. for finding the 2nd number in the fibonacci sequence (starting at 0).
+
+Remember this is a recursive method in that it calls itself.
+
+To start with we feed the method the number 2 (as we want fibonacci(2) ). As you can see from the method we end up in the 'else' section of the 'if' statement.
+
+Now the variable number = 2, so
+
+```ruby
+  fibonacci(number - 1) + fibonacci(number - 2)
+```
+
+is going to translate to: fibonacci(1) + fibonacci(0).
+
+Clear so far?
+
+Right, now to work out fibonacci(0). Because we have a recursive method here, we go back and feed the method the number 0 (i.e. number = 0). Can you see we exit at the 'if' statement as number < 2?
+
+```ruby
+if number < 2
+  number
+```
+
+I.e number = 0 is what is returned. That is why the right block of the small tree structure has f(0) = 0 written inside it.
+
+Now we have to calculate fibonacci(1). Feed 1 into the method so that number = 1. Again we get to exit at the 'if' statement as number = 1, which is smaller than 2. So number is also returned with a value of 1. Now we have f(1) = 1
+
+Now we can calculate fibonacci(2) = fibonacci(1) + fibonacci(0) = 1 + 0 = 1.
+
+To go further, fibonacci(3) = fibonacci(2) + fibonacci(1). From our work just above we know fibonacci(2) = 1 and fibonacci(1) = 1, so fibonacci(3) = 1 + 1 = 2.
+
+or f(3) = f(2) + f(1) as per the blocks in the tree structure.
+
+The tree should make more sense to you now. To work out any other fibonacci number just add up the the previous two fibonacci numbers (remembering it always comes back to f(1) and f(0) ). in other words, that is what the recursion does for you. The recursive method (algorithm) 'unwinds' the number you give it until it can get an actual value (0 or 1), and then adds that to the total.
+
+Hope that helps!
