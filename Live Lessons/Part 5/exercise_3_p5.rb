@@ -29,7 +29,7 @@ def prime(n1, n2)
     prime = true
   end
 
-  return prime_numbers
+  prime_numbers
 end
 
 n1 = 0
