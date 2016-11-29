@@ -1,0 +1,3 @@
+Beware of checking using #class to check the type of an object. It's a potential problem if Fixnum ever goes away or is changed (and there's some evidence that it will go away someday, to be replaced by the Integer class.)
+
+If you simply must distinguish between object types, use Kernel#respond_to? instead. You don't really need to do this here; a case statement can be used in this method to determine the appropriate score.
